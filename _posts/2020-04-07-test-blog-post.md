@@ -1,6 +1,6 @@
-layout: page
+layout: post
 title: "Blog post test"
-date: 2020-04-07 22:00:00 -0000
+date: 2020-04-07 22:00:00
 categories: test1 test2
 
 # Title 1
