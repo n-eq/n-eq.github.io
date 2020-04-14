@@ -2,6 +2,8 @@ name: Nabil Elqatib (marrakchino)
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-midnight
-twitter_username: neqneqneq
 plugins:
     - jekyll-seo-tag
+twitter:
+    username: neqneqneq
+    card: summary
