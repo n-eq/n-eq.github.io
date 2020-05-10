@@ -2,7 +2,7 @@
 layout: post
 title: "Unlocking uplink frame retries mecanism on Telecom Design's Sigfox modules"
 date: 2020-04-07 22:00:00
-categories: sigfox telecom-design reverse-engineering
+tags: [sigfox, telecom-design, reverse-engineering]
 ---
 
 When I first met Christophe Fourtet (Sigfox's Chief Scientific Officer) in June 2018,
