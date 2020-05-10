@@ -1,4 +1,4 @@
-name: Nabil Elqatib (marrakchino)
+name: Nabil Elqatib
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-midnight
@@ -9,3 +9,10 @@ twitter:
     card: summary
 
 tag_page: '/blog/tags.html'
+
+social:
+  name: Nabil Elqatib
+  links:
+    - https://twitter.com/neqneqneq
+    - https://linkedin.com/in/nabilelqatib
+    - https://github.com/n-eq
