@@ -5,6 +5,12 @@ layout: default
 <p class="meta">{{ page.date | date_to_string }}</p>
 
 <div class="post">
+  {% if page.tags %} |
+  {% for tag in page.tags %}
+  <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+  {% endfor %}
+  {% endif %}
+
   {{ content }}
 </div>
 <div class="share-page">
