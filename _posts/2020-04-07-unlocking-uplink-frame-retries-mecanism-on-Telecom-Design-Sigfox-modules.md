@@ -13,7 +13,7 @@ by the network for QoS matters.) A few months later, Sigfox open-sourced its rad
 (on device side). In the document (at least the November 2019 version, I couldn't
 retrieve February's release), it is officially stated that endpoints can
 choose to send single vs multiple (read 3) frames in an uplink message (cf. section
-[3.13.1 Single/multiple frame principle](https://storage.sbg.cloud.ovh.net/v1/AUTH_669d7dfced0b44518cb186841d7cbd75/prod_medias/build/40599z1k361d4ht/Sigfox%20radio%20specifications%20v1.4%20%20November%202019.pdf#page=18)).
+[3.13.1 Single/multiple frame principle](https://web.archive.org/web/20200521024316/https://storage.sbg.cloud.ovh.net/v1/AUTH_669d7dfced0b44518cb186841d7cbd75/prod_medias/build/40599z1k361d4ht/Sigfox%20radio%20specifications%20v1.4%20%20November%202019.pdf#page=18)).
 
 What this meant was that all Sigfox device manufacturers would subsequently
 update their libraries to allow makers to choose the most suitable procedure
