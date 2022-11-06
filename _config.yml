@@ -1,9 +1,22 @@
+title: Nabil Elqatib's blog
 name: Nabil Elqatib
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-midnight
+
+# Optimize Jekyll
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+
 plugins:
     - jekyll-seo-tag
+
 twitter:
     username: neqneqneq
     card: summary
