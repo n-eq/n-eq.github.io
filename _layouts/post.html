@@ -1,22 +1,12 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-  {% if page.tags %} |
-  Tags {% for tag in page.tags %}
-  <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
-  {% endfor %}
-  {% endif %}
-
+<article class="post">
+  <h1 class="post-title">
+    {{ page.title }}
+  </h1>
+  <p><time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time></p>
   {{ content }}
-</div>
-<div class="share-page">
-    Share this on &rarr;
-    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter.username }}&related={{ site.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ page.title }}" rel="nofollow" title="Share on LinkedIn">LinkedIn</a>
-
-</div>
+</article>
 
