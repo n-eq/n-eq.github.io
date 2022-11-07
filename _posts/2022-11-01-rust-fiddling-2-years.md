@@ -143,6 +143,7 @@ On a more personal note, I wish to be more involved in shaping Rust's future by 
 contributions to its software while keeping learning its concepts and intricacies.
 
 [Discussion on r/rust](https://www.reddit.com/r/rust/comments/yo1b20/2_years_of_fiddling_with_rust/)
+[HN article](https://news.ycombinator.com/item?id=33497051)
 
 ## External references
 
