@@ -52,7 +52,7 @@ hints and pointers to the documentation, which I must say are really helpful.
 This is a very common misconception that stemmed from a recent conversation with one of my non-Rust
 engineer colleagues. For him, it was inconceivable that a Rust program would panic because of an
 out-of-bounds runtime memory fail. Unfortunately, the Cargo compiler is not a one cure for all
-diseases, and obviously it is easy to trick into successfully compiling a program that only fails on
+diseases, and obviously it is easy to trick it into successfully compiling a program that only fails on
 runtime. Take the following example that uses a very common Rust data structure:
 
 ```rust
