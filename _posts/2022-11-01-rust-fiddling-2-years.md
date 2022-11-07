@@ -47,11 +47,11 @@ data structures, but also had the side effect of pushing back the moment when I 
 Fortunately enough, the compiler comes to the rescue with very helpful
 hints and pointers to the documentation, which I must say are really helpful.
 
-### Cargo is not a formal verification tool
+### Compiler is not a formal verification tool
 
 This is a very common misconception that stemmed from a recent conversation with one of my non-Rust
 engineer colleagues. For him, it was inconceivable that a Rust program would panic because of an
-out-of-bounds runtime memory fail. Unfortunately, the Cargo compiler is not a one cure for all
+out-of-bounds runtime memory fail. Unfortunately, the Rust compiler is not a one cure for all
 diseases, and obviously it is easy to trick it into successfully compiling a program that only fails on
 runtime. Take the following example that uses a very common Rust data structure:
 
@@ -62,7 +62,7 @@ v.clear();
 let _ = v[0]; // panics 
 ```
 
-Or event trickier:
+Or even trickier:
 
 ```rust
 let mut v = Vec::new();
