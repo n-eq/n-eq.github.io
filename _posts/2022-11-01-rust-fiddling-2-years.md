@@ -86,7 +86,7 @@ This came as a surprise to me because it makes dealing with dependencies somewha
 Eventhough most crates are nowadays open source, one can reasonably not audit all their source
 code to assess the "risk" of using them. The poor documentation of most crates also supports this point.
 Having a cargo tree-like tool that analyzes a project's
-dependencies and gives a bird's-eye vue of the crates that are panic-prone would be very helpful.
+dependencies and gives a bird's-eye view of the crates that are panic-prone would be very helpful.
 
 A quick idiomatic alternative to dealing with this problem could be overriding Rust's
 `panic_handler` but unfortunately this is only possible in `#![no_std]` projects.
@@ -141,6 +141,8 @@ bright future ahead.
 
 On a more personal note, I wish to be more involved in shaping Rust's future by making
 contributions to its software while keeping learning its concepts and intricacies.
+
+[Discussion on r/rust](https://www.reddit.com/r/rust/comments/yo1b20/2_years_of_fiddling_with_rust/)
 
 ## External references
 
