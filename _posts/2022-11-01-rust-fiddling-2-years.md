@@ -52,7 +52,7 @@ hints and pointers to the documentation, which I must say are really helpful.
 This is a very common misconception that stemmed from a recent conversation with one of my non-Rust
 engineer colleagues. For him, it was inconceivable that a Rust program would panic because of an
 out-of-bounds runtime memory fail. Unfortunately, the Rust compiler is not a one cure for all
-diseases, and obviously it is easy to trick into successfully compiling a program that only fails on
+diseases, and obviously it is easy to trick it into successfully compiling a program that only fails on
 runtime. Take the following example that uses a very common Rust data structure:
 
 ```rust
@@ -141,6 +141,8 @@ bright future ahead.
 
 On a more personal note, I wish to be more involved in shaping Rust's future by making
 contributions to its software while keeping learning its concepts and intricacies.
+
+[Discussion on r/rust](https://www.reddit.com/r/rust/comments/yo1b20/2_years_of_fiddling_with_rust/)
 
 ## External references
 
