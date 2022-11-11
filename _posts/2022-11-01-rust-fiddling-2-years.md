@@ -47,12 +47,12 @@ data structures, but also had the side effect of pushing back the moment when I 
 Fortunately enough, the compiler comes to the rescue with very helpful
 hints and pointers to the documentation, which I must say are really helpful.
 
-### Cargo is not a formal verification tool
+### Compiler is not a formal verification tool
 
 This is a very common misconception that stemmed from a recent conversation with one of my non-Rust
 engineer colleagues. For him, it was inconceivable that a Rust program would panic because of an
-out-of-bounds runtime memory fail. Unfortunately, the Cargo compiler is not a one cure for all
-diseases, and obviously it is easy to trick into successfully compiling a program that only fails on
+out-of-bounds runtime memory fail. Unfortunately, the Rust compiler is not a one cure for all
+diseases, and obviously it is easy to trick it into successfully compiling a program that only fails on
 runtime. Take the following example that uses a very common Rust data structure:
 
 ```rust
@@ -62,7 +62,7 @@ v.clear();
 let _ = v[0]; // panics 
 ```
 
-Or event trickier:
+Or even trickier:
 
 ```rust
 let mut v = Vec::new();
@@ -79,14 +79,14 @@ significantly slow down compilation time (which is already too slow IMO).
 ### Rust can be unpredictable
 This section is about a recent behavior I observed where our team woke up to one of our
 crates' (dependencies') dependencies starting to panic in production under specific conditions.
-Long-story short, a specific version of reqwest raises an error and panics if a
-system certificate is bad when using the `rustls-tls-native-roots` feature.
+Long story short, a specific version of [reqwest](https://docs.rs/reqwest/latest/reqwest/)
+raises an error and panics if a system certificate is bad when used with the `rustls-tls-native-roots` feature.
 
 This came as a surprise to me because it makes dealing with dependencies somewhat risky.\
 Eventhough most crates are nowadays open source, one can reasonably not audit all their source
 code to assess the "risk" of using them. The poor documentation of most crates also supports this point.
 Having a cargo tree-like tool that analyzes a project's
-dependencies and gives a bird's-eye vue of the crates that are panic-prone would be very helpful.
+dependencies and gives a bird's-eye view of the crates that are panic-prone would be very helpful.
 
 A quick idiomatic alternative to dealing with this problem could be overriding Rust's
 `panic_handler` but unfortunately this is only possible in `#![no_std]` projects.
@@ -95,14 +95,14 @@ A quick idiomatic alternative to dealing with this problem could be overriding R
 
 _Speaking of `no_std`..._ coming from the embedded world, this is a particular point of interest to me.
 I haven't had (_yet!_) the opportunity to write Rust code for memory-constrained/low-end devices
-and peripherals. Although this is not an immediate concern to me today, Rust binanries come with a
+and peripherals. Although this is not an immediate concern to me today, Rust binaries come with a
 non-trivial size overhead.
 
 I've read several blog posts and papers on this topic, in partiuclar, Jon Gjengset's videos are
 of great interest as they give a real hands-on overview of it. But my point here is that Rust still
 has a long way before becoming a serious contender to C for memory-limited targets.
-In the no_std world, I believe Rust still needs to figure out a way to provide viable panic
-handler libraries that don't rely on out-of-the-box formatting functions as they can be
+In the `#![no_std]` world, I believe Rust still needs to figure out a way to provide viable panic
+handler libraries that don't rely on out-of-the-box formatting functions as these can be
 very memory-consuming,
 [this article by James Munns](https://jamesmunns.com/blog/fmt-unreasonably-expensive/) was a real eye-opener to me.
 
@@ -116,11 +116,11 @@ pretty well established as there are many crates and examples out there. Writing
 is made relatively straightforward through the FFI machinery, I can't speak for all the languages but languages
 belonging to the C-family (C/C++/Objective-C) are well supported.
 
-This doesn't mean there is not much work to do, as you need to have some "plumbing" code here and there to glue
-things up, but it's the price to pay and I think it's fairly low.
+This doesn't mean there is not much work to do, as you still need to have some "plumbing" code here and there to glue
+things together, but it's the price to pay and I think it's fairly low.
 Also, it's nice to see Rust sticking to its philosophy and requiring shady low-level code to be declared unsafe
 (basically all FFI functions are _de facto_ unsafe because Rust can't have any control on the arbitrary code written
-in another language).
+in another language.)
 
 ### Rust is powerful
 
@@ -134,13 +134,17 @@ making sure threads run concurrently without race conditions and similar issues.
 ### A word to end
 
 I really enjoyed working with Rust. If I had the choice of a new software development
-language to learn in 2020 or even today in 2022 I'll definitely choose it, zero hestitation. I see
+language to learn in 2020 or even today in 2022 I'll definitely choose it, no hestitation. I see
 in it so much potential and hope it'll gain more visibility in the embedded systems world in the
 upcoming months. The recent introduction of a Rust Linux kernel module shows great promise and a
 bright future ahead.
 
-On a personal note, I would like to be more involved in shaping Rust's future by making
+On a more personal note, I wish to be more involved in shaping Rust's future by making
 contributions to its software while keeping learning its concepts and intricacies.
+
+[Discussion on r/rust](https://www.reddit.com/r/rust/comments/yo1b20/2_years_of_fiddling_with_rust/)
+
+[HN article](https://news.ycombinator.com/item?id=33497051)
 
 ## External references
 
