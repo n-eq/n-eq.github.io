@@ -3,7 +3,16 @@ layout: default
 title: n-eq
 ---
 <div>
-    <p>This is my personal website, I mainly use it as a tech blog for the moment.</p>
-    <p>You can find my blog <a href="blog/">here.</a></p> 
+  <h1>Latest posts</h1>
+  <ul>
+    {% for post in site.posts limit:10 %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+        <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
 

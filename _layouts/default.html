@@ -13,12 +13,10 @@
       {% endif %}
     </title>
 
-    <!--<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/print.css" media="print" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/assets/apple-touch-icon-precomposed.png' | relative_url }}">
-    <link rel="shortcut icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+    <link rel="shortcut icon" href="{{ '/images/favicon.png' | relative_url }}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ 'atom.xml' | relative_url }}">
 
     {% seo title=false %}
@@ -42,28 +40,14 @@
           </section>
         </main>
 
-        <aside id="sidebar">
-          <h1>Latest posts:</h1>
-          <ul>
-            {% for post in site.posts limit:10 %}
-            <li>
-              <a href="{{ site.baseurl }}{{ post.url }}">
-                {{ post.title }}
-                <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-        </aside>
-
       </div>
 
       <footer>
         <div class="wrapper">
 
           <div class="contact">
-            <div><strong>Nabil Elqatib's blog</strong></div>
-            <div><a href="https://twitter.com/neqneqneq">Twitter profile</a></div>
+            <div><strong>Contact</strong></div>
+            <div><a href="https://twitter.com/neqneqneq">Twitter</a></div>
             <div><a href="mailto:nabilelqatib@gmail.com">Email</a></div>
             <div><a href="https://github.com/n-eq/" title="Github">Github</a></div>
           </div>
