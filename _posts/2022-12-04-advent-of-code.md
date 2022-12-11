@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Advent of Code, yet another reason to wake up early"
-date: 2022-12-11 19:30:00
+date: 2022-12-04 19:30:00
 tags: [learning, programming-languages, development, advent-of-code]
 ---
 
