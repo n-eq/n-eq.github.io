@@ -8,7 +8,7 @@ tags: [public-speaking, conference]
 
 Last week was my first time being at a conference from the other side of the stage, that is as a speaker.
 With a colleague of mine, Elise Chouleur, we gave a talk on how we successfuly integrated a card reader into an already existing
-full-software test suite. If you're interested, here is a link to the [talk](https://talk.com), and the [slides](https://slides.com).
+full-software test suite. If you're interested, here is a link to the [talk](https://www.youtube.com/watch?v=cmmLHRnP-C0).
 
 I wanted to share some thoughts that can be seen as self-criticism or pieces of advice for better speaking performances.
     
