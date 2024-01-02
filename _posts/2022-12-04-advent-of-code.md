@@ -14,7 +14,7 @@ and it turned out I couldn't keep up with this rhythm as the winter made things 
 It was at the same period that my work (and workout) load significantly dropped and I feeled less the need
 to start my day earlier than necessary.
 
-_What do the vicissitudes of my sleeping and wake up times have with this blog post?_
+_What do the vicissitudes of my sleeping and wake up times have to do with this blog post?_
 
 
 ### Advent of Code
