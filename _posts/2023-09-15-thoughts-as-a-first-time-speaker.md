@@ -6,9 +6,12 @@ date: 2023-09-15 09:00:00
 tags: [public-speaking, conference]
 ---
 
-Last week was my first time being at a conference from the other side of the stage, that is as a speaker.
-With a colleague of mine, Elise Chouleur, we gave a talk on how we successfuly integrated a card reader into an already existing
-full-software test suite. If you're interested, here is a link to the [talk](https://www.youtube.com/watch?v=cmmLHRnP-C0).
+
+![](https://public-assets-for-web.s3.eu-west-3.amazonaws.com/jug_summercamp_2023.png "Myself and Elise on stage, answering questions from the audience.")
+
+Last week was my first time being at a conference from the other side of the stage, that is, as a speaker.
+With Elise Chouleur, a colleague of mine, we gave a talk on how we successfuly integrated a card reader into an already existing
+full-software test suite. If you're interested, here is a link to the [talk](https://www.youtube.com/watch?v=cmmLHRnP-C0) (in French).
 
 I wanted to share some thoughts that can be seen as self-criticism or pieces of advice for better speaking performances.
     
@@ -26,7 +29,7 @@ spot situations where you're running out of time, or too much ahead of it.
 ## Try to occupy both hands
 
 Find the most comfortable use of your hands. Personally, I found that speaking with both hands on
-the microphone more reassuring so switching to it from
+the microphone is more reassuring so switching to it from
 time to time was really helpful to concentrate on other things than not knowing what do with my arms.
 
 ## Breathe, don't rush, allow some time during transitions
@@ -36,7 +39,7 @@ when publicly speaking. Don't be afraid to make variable-time stops when speakin
 
 ## Don't be influenced by the audience's facial expressions
 
-I guess one of the reasons I got easily distracted and stressful during the presentation
+I guess one of the reasons why I got easily distracted and stressful during the presentation
 was that I misinterpreted some of the audience's facial expressions. Although I assume the vast
 majority of the audience was not knowledgeable on the topic, focusing too much on the audience made me
 think their reactions were bad judgements on the form or the content of the presentation.
