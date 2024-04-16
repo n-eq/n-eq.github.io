@@ -40,7 +40,7 @@ until some concepts, details, and tricks are gone. Sure, you don't need to re-le
 lack some automatisms at first.
 
 For about 2 years now my main focus was on [Rust](https://n-eq.github.io/blog/2022/11/01/rust-fiddling-2-years), and I didn't have the
-chance to professionally write substansial C/C++ code, for which I have a strong theoretical and practical background. I thought this
+chance to professionally write substantial C/C++ code, for which I have a strong theoretical and practical background. I thought this
 was a very adequate occasion to brush up my skills.\
 The best example of this is [Day 5](https://adventofcode.com/2022/day/5) for which I had to reimplement from scratch a linked list variant
 to handle moving crates around different stacks. Finishing that day's challenge was one of the most rewarding so far.
