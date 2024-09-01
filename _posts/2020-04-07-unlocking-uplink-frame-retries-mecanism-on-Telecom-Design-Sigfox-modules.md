@@ -68,7 +68,7 @@ td_sigfox.o file.
 
 Ghidra makes this task very easy. It yields two operations related to
 this variable, the first one is a read operation (in `TD_SIGFOX_SendV1`),
-and the second is write (bingo!). The write operation occurs in the function
+and the second is a write (bingo!). The write operation occurs in the function
 `TD_SIGFOX_AllowExtendedUse` decompiled below.
 
 ```c
