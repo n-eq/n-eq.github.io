@@ -25,16 +25,16 @@ Some folks (not too many) had already worked on Rust drivers for the PCD8544 con
 use was [dancek](https://github.com/dancek/pcd8544-hal)'s. It worked well, and I was able to get the display up and running
 after a few attemps to get the wiring right. Although being functional, the code was a bit obsolete (e.g.: still on Rust 2015),
 and not very well documented.
-I decided to fork the repository and start working on it. I wanted to make it more idiomatic, give it a bit of freshing up, and
+I decided to fork the repository and start working on it. I wanted to make it more idiomatic, give it a bit of freshing up,
 add some documentation, and make some improvements.
 The author kindly agreed that I fork the repository and publish my own version of the driver, since he was not actively maintaining it anymore,
 and wasn't planning to put together the hardware for it anytime soon.
 
 ## Design choices
 
-Although I didn't start from scratch, I had to make some design choices, and had to spend some time going back and forth
-between the documentation and the code to understand how things worked, especially writing ASCII characters to the screen, and
-making sure every sent command made sense with regard to the controller's datasheet.
+Although I didn't start from scratch, I had to make some design choices, and to spend some time going back and forth
+between the datasheet and the code to understand how things worked, especially writing ASCII characters to the screen, and
+making sure every sent command made sense.
 This led me to make some minor improvements, but although I had listed some ideas for future developments, I decided to keep the crate as simple
 as possible and focus on core features.
 
