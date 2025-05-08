@@ -15,7 +15,8 @@ exclude:
   - README.md
 
 plugins:
-    - jekyll-seo-tag
+  - jekyll-seo-tag
+  - jekyll-feed
 
 twitter:
     username: neqneqneq
