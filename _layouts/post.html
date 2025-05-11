@@ -11,3 +11,12 @@ layout: default
   {{ content }}
 </article>
 
+<nav class="pagination">
+    {% if page.previous %}
+    <a href="{{ page.previous.url }}" title="{{ page.previous.title }}" class="previous">Previous post</a>
+    {% endif %}
+    {% if page.next %}
+    <a href="{{ page.next.url }}" title="{{ page.next.title }}" class="next">Next post</a>
+    {% endif %}
+</nav>
+

@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/print.css" media="print" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="shortcut icon" href="{{ '/images/favicon.png' | relative_url }}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ 'atom.xml' | relative_url }}">
 
@@ -34,28 +35,17 @@
       </header>
 
       <div class="inner clearfix">
-
         <main>
           <section id="main-content">
             {{ content }}
           </section>
         </main>
-
       </div>
 
-      <footer>
-        <div class="wrapper">
-
-          <div class="contact">
-            <div><strong>Contact</strong></div>
-            <div><a href="https://twitter.com/neqneqneq">Twitter</a></div>
-            <div><a href="mailto:nabilelqatib@gmail.com">Email</a></div>
-            <div><a href="https://github.com/n-eq/" title="Github">Github</a></div>
-          </div>
-
-        </div>
-      </footer>
-
     </div>
+
+    <!-- TODO FIXME -->
+    <!-- {% include footer.html %} -->
+
   </body>
 </html>
