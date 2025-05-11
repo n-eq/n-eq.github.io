@@ -4,10 +4,11 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-midnight
 
-# Optimize Jekyll
 exclude:
   - .editorconfig
   - .git
+  - .gitignore
+  - .sass-cache/
   - .jekyll-cache
   - Gemfile
   - Gemfile.lock
