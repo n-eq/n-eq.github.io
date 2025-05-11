@@ -28,10 +28,8 @@ google_analytics: G-6F7Q8R73G5
 tag_page: '/blog/tags.html'
 
 social:
-  name: Nabil Elqatib
   links:
     - https://twitter.com/neqneqneq
-    - https://linkedin.com/in/nabilelqatib
     - https://github.com/n-eq
 
 sass:
