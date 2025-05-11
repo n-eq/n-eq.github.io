@@ -22,6 +22,8 @@ twitter:
     username: neqneqneq
     card: summary
 
+google_analytics: G-6F7Q8R73G5
+
 tag_page: '/blog/tags.html'
 
 social:
@@ -31,4 +33,5 @@ social:
     - https://linkedin.com/in/nabilelqatib
     - https://github.com/n-eq
 
-google_analytics: G-6F7Q8R73G5
+sass:
+  sass_dir: _sass

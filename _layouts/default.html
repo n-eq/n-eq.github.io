@@ -17,7 +17,10 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/print.css" media="print" />
-    <link rel="shortcut icon" href="{{ '/images/favicon.png' | relative_url }}">
+    <link
+    rel="stylesheet"
+    type="text/css" href="{{ '/_sass/main.css' | relative_url }}">
+    {% comment %} <link rel="shortcut icon" href="{{ '/images/favicon.png' | relative_url }}"> {% endcomment %}
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ 'atom.xml' | relative_url }}">
 
     {% seo title=false %}
