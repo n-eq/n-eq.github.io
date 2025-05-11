@@ -19,6 +19,7 @@
   }
   @include transition(all .1s ease-in-out);
 }
+
 aside#sidebar {
     float: right;
     width: 200px;
@@ -32,17 +33,6 @@ aside#sidebar {
 
 li {
     font-size: 1.5em;
-}
-
-nav ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li{
-    display: inline;
-    margin-right: 20px;
 }
 
 nav ul{
@@ -162,31 +152,27 @@ display: block;
 }
 
 @media (max-width:500px) {
-    .footer-menu ul{
-        display: flex;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-    aside#sidebar {
-        float: none;
-        width: 100% ! important;
-    }
-    aside#sidebar {
-        min-height: 0;
-        padding: 20px 0;
-        margin-top: 20px;
-        background: none;
-        border-top: solid 1px #ddd;
-    }
-                    }
-    }
+  .footer-menu ul{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  aside#sidebar {
+    float: none;
+    width: 100% !important;
+  }
+  aside#sidebar {
+    min-height: 0;
+    padding: 20px 0;
+    margin-top: 20px;
+    background: none;
+    border-top: solid 1px #ddd;
+  }
 }
 
 .share-page {
     margin-bottom: 20px;
 }
-
-
 
 nav.pagination {
   display: flex;
