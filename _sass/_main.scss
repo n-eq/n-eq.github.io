@@ -1,6 +1,6 @@
 .post-tag {
   display: inline-block;
-  background: rgba($theme-color, 0.15);
+  // background: rgba($theme-color, 0.15);
   padding: 0 .5rem;
   margin-right: .5rem;
   border-radius: 4px;
@@ -181,8 +181,8 @@ nav.pagination {
   padding: 1em 0;
 
   a {
-    border-bottom: 0.2rem solid #cc0000;
-    color: #cc0000;
+    border-bottom: 0.2rem solid;
+    // color: #cc0000;
     font-weight: bold;
     text-decoration: none;
 
