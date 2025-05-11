@@ -185,3 +185,25 @@ display: block;
 .share-page {
     margin-bottom: 20px;
 }
+
+
+
+nav.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 2em;
+  padding: 1em 0;
+
+  a {
+    border-bottom: 0.2rem solid #cc0000;
+    color: #cc0000;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 0.2rem solid #000000;
+      color: #000000;
+    }
+  }
+}
+
