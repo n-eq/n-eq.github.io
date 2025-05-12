@@ -18,7 +18,10 @@ layout: default
   {% endif %}
 
   <small>{% include read_time.html post=page %}</small>
-  {{ content }}
+
+  <hr>
+
+  {{ content | toc }}
 </article>
 
 <nav class="pagination">
