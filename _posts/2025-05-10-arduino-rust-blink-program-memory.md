@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Inspecting the memory layout of a Rust blink program for Arduino"
+title: "From Rust to AVR assembly: Dissecting a minimal blinky program"
 date: 2025-5-12 10:00:00
 tags: [rust, arduino, embedded, memory, hal, reverse-engineering, assembly]
 ---
