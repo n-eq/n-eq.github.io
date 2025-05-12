@@ -18,6 +18,7 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-last-modified-at
 
 twitter:
     username: neqneqneq

@@ -7,6 +7,16 @@ layout: default
     {{ page.title }}
   </h1>
   <p><time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time></p>
+
+  <!-- only show last updated if it's different from the publication date -->
+  {% if page.last_modified_at %}
+    {% assign date_publish = page.date | date: "%b %-d, %Y" %}
+    {% assign date_update  = page.last_modified_at | date: "%b %-d, %Y" %}
+    {% if date_publish  != date_update %}
+      <p><small><i>Last updated: {{ page.last_modified_at | date_to_string }}</i></small></p>
+    {% endif %}
+  {% endif %}
+
   <small>{% include read_time.html post=page %}</small>
   {{ content }}
 </article>
