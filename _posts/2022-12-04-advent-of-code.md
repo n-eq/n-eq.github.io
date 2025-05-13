@@ -25,7 +25,7 @@ Some of my colleagues have created a private leaderboard for fun. \
 Since I live in Paris, the challenges are added daily at 6 am CET (UTC+1), the earlier I'm up after 6 the better
 it is for me to solve the challenges and win as much points as possible to keep a decent position in the leaderboard.
 
-![](https://public-assets-for-web.s3.eu-west-3.amazonaws.com/advent-of-code-2022.png)
+![]({{ "/assets/images/advent-of-code-2022.png" | relative_url }})
 _My company's private leaderboard (started writing this article when I was 4th, became 1st at the time of publication)_
 
 In this article, I would like to highlight some benefits of ~~waking up early~~ taking part in the Advent of Code.
