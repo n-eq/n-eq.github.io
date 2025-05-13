@@ -11,7 +11,7 @@ be interesting to reflect on some impressions and lessons learned during this jo
 _Below is my first commit in a Rust repository. Although it dates to Jan. 2021, I have been
 fiddling with it (cf. the title of this article!) for several weeks._
 
-![My first Rust commit!](https://public-assets-for-web.s3.eu-west-3.amazonaws.com/first-commit-rust.png)
+![My first Rust commit!]({{ "/assets/images/first-commit-rust.png" | relative_url }})
 
 ## How did I get into Rust in the first place?
 
