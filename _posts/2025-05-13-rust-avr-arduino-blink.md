@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "From Rust to AVR assembly: Dissecting a minimal blinky program"
-date: 2025-5-13 02:00:00
+date: 2025-5-13 00:00:00
 tags: [rust, embedded-rust, avr, arduino, embedded, memory, hal, reverse-engineering, assembly]
 ---
 
