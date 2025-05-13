@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "From Rust to AVR assembly: Dissecting a minimal blinky program"
-date: 2025-5-13 10:00:00
-tags: [rust, arduino, embedded, memory, hal, reverse-engineering, assembly]
+date: 2025-5-12 10:00:00
+tags: [rust, embedded-rust, avr, arduino, embedded, memory, hal, reverse-engineering, assembly]
 ---
 
 Unless you prefer to define registers, addresses, and toggle bits manually, the simplest Rust "Blinky" program
@@ -47,7 +47,7 @@ If you're familiar with the previous snippet, you can skip to the next section. 
 
 ### no_std
 This line tells the Rust compiler not to link the standard library (`std`). 
-Instead, we'll only rely on the `core` library, which is a subset of it.
+Instead, we rely solely on the core library, which is a lightweight subset designed for resource-constrained environments.
 Since we're writing code for an embedded device with limited memory, we exclude
 the standard library, which is designed for general-purpose systems.
 This means we won't have access to features like heap allocation, collections, threads, etc.
@@ -70,7 +70,7 @@ real entrypoint for the program, this is out of the scope of this post.
 
 Our `main` function returns `!`, indicating it never returns — which is typical for embedded programs.
 
-The first three lines correspond to the `setup` function of the equivalent Arduino sketch, that it:
+The first three lines correspond to the `setup` function in an equivalent Arduino sketch, that is:
 ```c
 void setup() {
     pinMode(13, OUTPUT);
@@ -121,7 +121,7 @@ $ avr-size blink.ino.elf
 ```
 
 Although the sketch was built with the default configuration (which uses `-Os` to optimize for size),
-its footprint is still roughly 3 times bigger than the Rust version. This is probably due to the fact that the
+its footprint is still roughly 3 times larger than the Rust version. This is probably due to the fact that the
 compilation process also uses `-g` to produce debugging information. I'm not sure if there are other
 things to consider (apart from C runtime initialization) but I didn't investigate further.
 If you happen to have the answer, please let me know.
@@ -226,8 +226,7 @@ The reset handler spans from 0x68 until 0x72.
 The first two instructions clear SREG (AVR status register) by XORing r1 with itself, and storing
 the result in it. The remaining instructions initialize stack pointer registers (SPH and SPL), they
 are respectively defined to 0xFF and 0x08, which sets the stack pointer to 0x08FF, i.e. the top of
-the ATmega328P's 2kB SRAM (0x0100–0x08FF). This is a common and safe starting point for a
-downward-growing stack in AVR MCUs.
+the ATmega328P's 2kB SRAM (0x0100–0x08FF).
 
 ### Program logic
 
@@ -305,8 +304,90 @@ Apart from that, there are a few observations we can make with regards to the `d
   topic for a future post.
 
 
+## Bonus: Coming Full Circle with `led.toggle()`
+
+Ironically, this whole journey started with the `toggle()` method. It was the first version of the
+code I wrote — elegant, compact, and exactly what you'd expect for blinking an LED:
+
+```rust
+loop {
+    // led.set_high();
+    // arduino_hal::delay_ms(1000);
+    // led.set_high();
+    // arduino_hal::delay_ms(1000);
+
+    led.toggle();
+    arduino_hal::delay_ms(1000);
+}
+```
+
+But when I dug into the disassembly to understand what was really happening under the hood, things got murky.
+The output wasn't as obvious as I'd hoped. I couldn’t clearly trace how `toggle()` translated
+to actual AVR assembly code, especially compared to the more straightforward `set_high()` and `set_low()`,
+which map cleanly to `sbi` and `cbi` instructions.
+
+So, I took a step back and rewrote the loop using `set_high()` and `set_low()`
+— a more verbose but transparent approach. That led to the post you read so far.
+
+But near the end of writing this post, curiosity brought me back to toggle().
+That’s when I noticed something remarkable in the datasheet:
+
+> "Writing a logic one to a bit in the PINx register will result in a toggle in the corresponding bit in the data register."
+
+and later on a curious thread created in 2017 on the same topic on [Arduino forum](https://forum.arduino.cc/t/just-discovered-something-very-useful-about-the-avr/430941).
+
+That’s the key! `avr-hal-generic` crate writes directly to the `PINx` register — generating a *single instruction*, typically `sbi PINx, n`.
+No need for read-modify-write. No critical section. Just one atomic operation, since ATmega328p
+supports atomic-toggle.
+
+Here's the relevant snippet from `avr-hal-generic`:
+
+```rust
+// https://github.com/Rahix/avr-hal/blob/7583be5f230cb238f5b518033bcfe78116e063d7/avr-hal-generic/src/port.rs#L651-L670
+#[inline]
+unsafe fn out_toggle(&mut self) {
+    match self.port {
+        $(DynamicPort::[<PORT $name>] => {
+            if $chip_supports_atomic_toggle {
+                (*<$port>::ptr()).[<pin $name:lower>].write(|w| {
+                    w.bits(self.mask)
+                })
+            } else {
+                // ...
+            }
+        },)+
+    }
+}
+```
+
+Looking at the disassembled code, we can indeed identify the following instructions:
+```
+ldi r17, 0x20
+...
+out 0x03, r17
+```
+PINB is set to 0x20 (0b00100000, 5th bit to 1), confirming the expected behavior.
+
+So, in the end, `led.toggle()` isn't just syntactic sugar — it’s **the most efficient way**
+to blink an LED on the ATmega328P.
+
+One line of Rust. One machine instruction. And a full-circle moment of discovery that
+made the detour completely worth it.
 
 
+## Some takeaways
+
+Writing embedded Rust may seem intimidating at first, especially when the abstractions
+hide away the low-level implementation details that are most likely datasheet secrets.
+
+But that’s also where it gets fun. By digging into a simple blinky program, we’ve
+explored how Rust compiles down to AVR assembly, how memory is laid out,
+how initialization works behind the scenes, and how even a single one-byte
+static variable can play a crucial role in ensuring safe access to hardware.
+
+Taking the detour through `set_high()` and `set_low()` only to return to `toggle()` and
+uncover how it leverages a lesser-known AVR feature was really both stimulating and a great
+eye-opener to what happens under the hood.
 
 ## References
 
