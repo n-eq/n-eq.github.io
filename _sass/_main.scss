@@ -1,5 +1,35 @@
+.article-list {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+
+}
+
+.article-list .post-title {
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+.article-list .post-date {
+  font-family: monospace;
+  font-size: 0.35em;
+  color: #999;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.article-list .post-excerpt {
+  font-size: 14px;
+  color: #656160;
+  font-style: italic;
+}
+
 p {
-  font-size: 18px;
+  font-size: 22px;
+}
+
+ul {
+  font-size: 22px,
 }
 
 aside#sidebar {
