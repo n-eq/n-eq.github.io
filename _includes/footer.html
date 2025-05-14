@@ -1,8 +1,16 @@
-<footer>
-  <div class="contact">
-    <!--TODO: use socials values from _config.yml-->
-    <div><strong>Contact</strong></div>
-    <div><a href="https://twitter.com/neqneqneq">Twitter</a></div>
-    <div><a href="https://github.com/n-eq/" title="Github">Github</a></div>
+<footer class="site-footer">
+  <div class="container">
+    <a href="{{ site.social.github }}" title="GitHub">
+      {% include icons/github.html %}
+    </a>
+
+    <a href="{{ site.social.linkedin }}" title="LinkedIn">
+      {% include icons/linkedin.html %}
+    </a>
+
+    <a href="{{ site.baseurl }}/{{ site.social.rss_feed }}" title="RSS feed">
+      {% include icons/rss.html %}
+    </a>
+
   </div>
 </footer>

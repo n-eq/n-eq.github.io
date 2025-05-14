@@ -29,9 +29,6 @@ google_analytics: G-6F7Q8R73G5
 tag_page: '/blog/tags.html'
 
 social:
-  links:
-    - https://twitter.com/neqneqneq
-    - https://github.com/n-eq
-
-sass:
-  sass_dir: _sass
+  github: https://github.com/n-eq
+  linkedin: https://linkedin.com/in/nabilelqatib
+  rss_feed: 'feed.xml'
