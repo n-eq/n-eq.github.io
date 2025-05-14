@@ -9,7 +9,7 @@ completed a first milestone by publishing my first Rust crate."
 
 A few years ago I had expressed the wish to "be involved in shaping Rust's future by making 
 contributions to its software while keeping learning its concepts and intricacies" in one of my
-[blog posts](https://n-eq.github.io/blog/2022/11/01/rust-fiddling-2-years).
+[blog posts]({% post_url 2022-11-01-rust-fiddling-2-years %}).
 
 In retrospect, I tend to consider that goal as very ambitious. However, I am happy to say that I have today 
 made one very small step towards that goal by publishing a Rust crate (`pcd8544-hal`) on [crates.io](https://crates.io/crates/pcd8544-hal/).
