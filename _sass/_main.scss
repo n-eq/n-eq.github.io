@@ -36,12 +36,16 @@
   font-style: italic;
 }
 
-p {
-  font-size: 22px;
+.post.ul {
+  font-size: 10px;
 }
 
-ul {
-  font-size: 22px,
+.post.ol {
+  font-size: 10px;
+}
+
+p {
+  font-size: 20px;
 }
 
 aside#sidebar {
