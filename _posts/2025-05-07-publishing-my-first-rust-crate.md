@@ -3,6 +3,8 @@ layout: post
 title: "Publishing my first Rust crate"
 date: 2025-5-7 15:00:00
 tags: [rust, open-source, programming]
+excerpt: "For years I've been wondering how I can contribute to open source in Rust. Today, I
+completed a first milestone by publishing my first Rust crate."
 ---
 
 A few years ago I had expressed the wish to "be involved in shaping Rust's future by making 

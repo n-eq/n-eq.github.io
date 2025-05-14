@@ -11,6 +11,9 @@ title: n-eq
         {{ post.title }}
         <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
       </a>
+      <p class=post-excerpt>
+        <small><i>{{ post.excerpt }}</i></small>
+      </p>
     </li>
     {% endfor %}
   </ul>

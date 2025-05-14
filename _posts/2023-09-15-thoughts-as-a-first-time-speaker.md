@@ -4,6 +4,10 @@ layout: post
 title: "Thoughts of a first-time conference speaker"
 date: 2023-09-15 09:00:00
 tags: [public-speaking, conference]
+excerpt: "Public speaking can be intimdating, especially for software engineers. Personally,
+I never was comfortable performing in front of an audience.
+This article is a short note on some observations I made while giving a public talk for the
+first time."
 ---
 
 
