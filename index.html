@@ -6,13 +6,19 @@ title: n-eq
   <h1>Latest posts</h1>
   <ul>
     {% for post in site.posts limit:10 %}
-    <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">
+    <li class=article-list>
+      <a href="{{ site.baseurl }}{{ post.url }}" class=post-title>
         {{ post.title }}
-        <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
       </a>
+
+      <span class="post-date">
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%d/%m/%Y" }}
+      </time>
+      </span>
+
       <p class=post-excerpt>
-        <small><i>{{ post.excerpt }}</i></small>
+        {{ post.excerpt }} ...<a href="{{ site.baseurl }}{{ post.url }}"> Read more</a>
       </p>
     </li>
     {% endfor %}
