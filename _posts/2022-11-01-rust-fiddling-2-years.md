@@ -3,6 +3,8 @@ layout: post
 title: "2 years of fiddling with Rust"
 date: 2022-11-01 20:00:00
 tags: [rust, learning, programming-languages, development]
+excerpt: "For almost two years, I've been learning and using Rust profesionally. In this article I
+share some insights and observations from this journey."
 ---
 
 It's been _(almost)_ two years since I started my first steps in the Rust world. I thought it could

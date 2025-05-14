@@ -3,6 +3,9 @@ layout: post
 title: "From Rust to AVR assembly: Dissecting a minimal blinky program"
 date: 2025-5-13 00:00:00
 tags: [rust, embedded-rust, avr, arduino, embedded, memory, hal, reverse-engineering, assembly]
+excerpt: "Ever wondered how high-level Rust code gets compiled into assembly before being executed
+on a target microcontroller? This article is a detailed workthrough of the process on an AVR
+microcontroller, sharing low-level insights and explaining interesting Rust features."
 ---
 
 Unless you prefer to define registers, addresses, and toggle bits manually, the simplest Rust "Blinky" program
