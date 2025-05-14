@@ -24,6 +24,18 @@
   font-style: italic;
 }
 
+.post .post-title {
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+.post .date-and-update {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-style: italic;
+}
+
 p {
   font-size: 22px;
 }
