@@ -4,10 +4,14 @@ layout: post
 title: "Thoughts of a first-time conference speaker"
 date: 2023-09-15 09:00:00
 tags: [public-speaking, conference]
+excerpt: "Public speaking can be intimdating, especially for software engineers. Personally,
+I never was comfortable performing in front of an audience.
+This article is a short note on some observations I made while giving a public talk for the
+first time."
 ---
 
 
-![](https://public-assets-for-web.s3.eu-west-3.amazonaws.com/jug_summercamp_2023.png "Myself and Elise on stage, answering questions from the audience.")
+![Myself and Elise on stage, answering questions from the audience.]({{ "/assets/images/jug_summercamp_2023.png" | relative_url }})
 
 Last week was my first time being at a conference from the other side of the stage, that is, as a speaker.
 With Elise Chouleur, a colleague of mine, we gave a talk on how we successfuly integrated a card reader into an already existing

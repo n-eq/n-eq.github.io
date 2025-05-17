@@ -3,6 +3,7 @@ layout: post
 title: "Unlocking uplink frame retries mecanism on Telecom Design's Sigfox modules"
 date: 2020-04-07 22:00:00
 tags: [sigfox, telecom-design, reverse-engineering]
+excerpt: "Hacking a Sigfox RF closed-source library using Ghidra. What could go wrong?"
 ---
 
 When I first met Christophe Fourtet (Sigfox's Chief Scientific Officer) in June 2018,
@@ -34,7 +35,7 @@ this change by silently allowing this evolution.
 
 We start by first decompiling `TD_SIGFOX_SendV1` function located in `td_sigfox.o`
 object in `libtdrf.a` archive.
-![](https://public-assets-for-web.s3.eu-west-3.amazonaws.com/td_sigfox_sendv1_decompilation.png "Ghidra function decompilation")
+![]({{ "/assets/images/td_sigfox_sendv1_decompilation.png" | relative_url }} "Ghidra function decompilation")
 
 Without going any further, we can make the following observations :
 
@@ -102,7 +103,7 @@ we can observe how the device behaves when sending a single-frame versus
 when it sends three consecutive frames. This also shows how we can divide
 the current consumption by three when chosing single-frame uplinks instead
 of triple-frames.
-![](https://public-assets-for-web.s3.eu-west-3.amazonaws.com/tx_frames.png "Current consumption: Single-frame vs triple-frame uplink messages")
+![]({{ "/assets/images/tx_frames.png" | relative_url }} "Current consumption: Single-frame vs triple-frame uplink messages")
 
 #### Using Sigfox backend
 
@@ -115,4 +116,4 @@ the documentation is not really clear on this point.)
 Similarly, we can easily verify for a given message the number of frames
 emitted by the end product, as in the following screenshot.
 
-![](https://public-assets-for-web.s3.eu-west-3.amazonaws.com/tx_frames_backend.png "Single-frame vs triple-frame uplink messages")
+![]({{ "/assets/images/tx_frames_backend.png" | relative_url }} "Single-frame vs triple-frame uplink messages")

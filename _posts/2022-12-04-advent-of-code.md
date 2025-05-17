@@ -3,6 +3,7 @@ layout: post
 title: "Advent of Code, yet another reason to wake up early"
 date: 2022-12-04 19:30:00
 tags: [learning, programming-languages, development, advent-of-code]
+excerpt: "Waking up early for fun and profit (climbing AoC's leaderboard)"
 ---
 
 Since several weeks, I made the decision to wake up at 6am (which is earlier than I need to, except on weekends.)
@@ -25,7 +26,7 @@ Some of my colleagues have created a private leaderboard for fun. \
 Since I live in Paris, the challenges are added daily at 6 am CET (UTC+1), the earlier I'm up after 6 the better
 it is for me to solve the challenges and win as much points as possible to keep a decent position in the leaderboard.
 
-![](https://public-assets-for-web.s3.eu-west-3.amazonaws.com/advent-of-code-2022.png)
+![]({{ "/assets/images/advent-of-code-2022.png" | relative_url }})
 _My company's private leaderboard (started writing this article when I was 4th, became 1st at the time of publication)_
 
 In this article, I would like to highlight some benefits of ~~waking up early~~ taking part in the Advent of Code.

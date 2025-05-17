@@ -3,6 +3,8 @@ layout: post
 title: "2 years of fiddling with Rust"
 date: 2022-11-01 20:00:00
 tags: [rust, learning, programming-languages, development]
+excerpt: "For almost two years, I've been learning and using Rust profesionally. In this article I
+share some insights and observations from this journey."
 ---
 
 It's been _(almost)_ two years since I started my first steps in the Rust world. I thought it could
@@ -11,7 +13,7 @@ be interesting to reflect on some impressions and lessons learned during this jo
 _Below is my first commit in a Rust repository. Although it dates to Jan. 2021, I have been
 fiddling with it (cf. the title of this article!) for several weeks._
 
-![My first Rust commit!](https://public-assets-for-web.s3.eu-west-3.amazonaws.com/first-commit-rust.png)
+![My first Rust commit!]({{ "/assets/images/first-commit-rust.png" | relative_url }})
 
 ## How did I get into Rust in the first place?
 
