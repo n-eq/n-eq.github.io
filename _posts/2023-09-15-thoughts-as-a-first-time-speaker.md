@@ -8,6 +8,7 @@ excerpt: "Public speaking can be intimdating, especially for software engineers.
 I never was comfortable performing in front of an audience.
 This article is a short note on some observations I made while giving a public talk for the
 first time."
+update-date: 2024-04-16 00:00:00
 ---
 
 

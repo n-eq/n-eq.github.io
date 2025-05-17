@@ -4,6 +4,7 @@ title: "Advent of Code, yet another reason to wake up early"
 date: 2022-12-04 19:30:00
 tags: [learning, programming-languages, development, advent-of-code]
 excerpt: "Waking up early for fun and profit (climbing AoC's leaderboard)"
+update-date: 2024-04-16 00:00:00
 ---
 
 Since several weeks, I made the decision to wake up at 6am (which is earlier than I need to, except on weekends.)
