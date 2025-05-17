@@ -18,6 +18,7 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-tagging
 
 twitter:
     username: neqneqneq
@@ -25,7 +26,8 @@ twitter:
 
 google_analytics: G-6F7Q8R73G5
 
-tag_page: '/blog/tags.html'
+tag_page_layout: tag_page
+tag_page_dir: blog/tags
 
 social:
   github: https://github.com/n-eq
