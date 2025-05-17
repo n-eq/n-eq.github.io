@@ -4,6 +4,7 @@ title: "Unlocking uplink frame retries mecanism on Telecom Design's Sigfox modul
 date: 2020-04-07 22:00:00
 tags: [sigfox, telecom-design, reverse-engineering]
 excerpt: "Hacking a Sigfox RF closed-source library using Ghidra. What could go wrong?"
+update-date: 2020-09-01 00:00:00
 ---
 
 When I first met Christophe Fourtet (Sigfox's Chief Scientific Officer) in June 2018,
