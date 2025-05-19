@@ -8,8 +8,7 @@ I've developed a clearer view of what an ideal technical interview format should
 ---
 
 Over the past few weeks, I’ve interviewed with a handful of companies (from startups to SMBs and
-public institutions.) These experiences helped shape a clearer view of what an ideal technical
-interview format should look like.  Through these experiences, I've developed a clearer view of what
+public institutions.) Through these experiences, I've developed a clearer view of what
 an ideal technical interview format should look like.
 
 Evaluating a software engineer's technical skillset within a limited amount of time is a fairly
