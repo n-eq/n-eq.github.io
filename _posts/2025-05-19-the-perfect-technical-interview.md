@@ -5,6 +5,7 @@ date: 2025-05-19 00:00
 tags: [software-engineering, hr, recruitment]
 excerpt: "Finding the right candidate for a tech role is a non-deterministic process.
 I've developed a clearer view of what an ideal technical interview format should look like."
+update-date: 2025-05-20
 ---
 
 Over the past few weeks, I’ve interviewed with a handful of companies (from startups to SMBs and
@@ -12,21 +13,21 @@ public institutions.) Through these experiences, I've developed a clearer view o
 an ideal technical interview format should look like.
 
 Evaluating a software engineer's technical skillset within a limited amount of time is a fairly
-difficult task.  In this short post, I'll specifically focus on the step where candidates are
-expected to demonstrate their technical skills — excluding HR screening and team-fit interviews.
+difficult task. In this short post, I'll specifically focus on the step where candidates are
+expected to demonstrate their technical skills, excluding HR screening and team-fit interviews.
 
 Arguably, the most common format companies rely on is the home-assignment coding challenge, where
 candidates are asked to solve a programming puzzle and/or answer additional multiple choice
 questions. While this format can be relevant for _certain_ roles, it's often a poor and low-effort
 strategy. In many cases, it reflects a lack of creativity or investment from hiring teams, rather
 than a genuine attempt to evaluate real-world skills. \
-Unless it clearly aligns with the role, it
-should come as a red flag it may be worth reconsidering your application.
+Unless it clearly aligns with the role, it should come as a red flag it may be worth reconsidering
+your application.
 
 ## Good technical interviews are thoughtful
 
 When candidates invest time and effort into learning about a company, understanding its tech stack,
-its culture, and values, it’s only fair to expect the same level of care from recruiters —
+its culture, and values, it’s only fair to expect the same level of care from recruiters,
 especially in how they craft and evaluate the technical interview step.
 
 That is the reason why technical interviews should reflect genuineness and authenticity. A
@@ -34,7 +35,7 @@ well-designed, original task signals engagement from the company. In turn, serio
 more valued, and are more likely to develop a deeper interest in the role and the team.
 
 When conducted well, technical interviews should foster side-discussions, encourage questions, and
-allow for digressions — off-topic but still tech-related — that can offer a better grasp of the
+allow for digressions (off-topic but still tech-related) that can offer a better grasp of the
 person being interviewed.
 
 ## Good technical interviews are relevant
@@ -75,7 +76,7 @@ qualities that often make the difference between a good engineer and a great one
 
 ## Conclusion
 
-Designing good technical interviews is not about adding complexity — it’s about creativity, realism,
-and relevance that signal respect for the candidate’s time and experience. In return, they attract stronger,
-more motivated applicants who are eager to contribute for the right reasons.
+Designing good technical interviews is not about adding complexity; it’s about creativity, realism,
+and relevance that signal respect for the candidate’s time and experience. In return, they can
+attract stronger, more motivated applicants who are eager to contribute for the right reasons.
 
