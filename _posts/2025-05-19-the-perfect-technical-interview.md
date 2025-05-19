@@ -74,3 +74,9 @@ encouraged beforehand in the assigment instructions), or challenge assumptions �
 evaluating their critical thinking abilities, collaborative behavior, and adaptability; the
 qualities that often make the difference between a good engineer and a great one.
 
+## Conclusion
+
+Designing good technical interviews is not about adding complexity — it’s about creativity, realism,
+and relevance that signal respect for the candidate’s time and experience. In return, they attract stronger,
+more motivated applicants who are eager to contribute for the right reasons.
+
