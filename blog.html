@@ -1,0 +1,31 @@
+---
+layout: default
+title: "Blog posts"
+---
+
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/blog.css" />
+
+<div>
+  <h1>Latest posts</h1>
+  <ul>
+    {% for post in site.posts limit:8 %}
+    <li class=article-list>
+      <a href="{{ site.baseurl }}{{ post.url }}" class=post-title>
+        {{ post.title }}
+      </a>
+
+      <span class="post-date">
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%d/%m/%Y" }}
+      </time>
+      </span>
+
+      <p class=post-excerpt>
+        {{ post.excerpt }} ...<a href="{{ site.baseurl }}{{ post.url }}"> Read more</a>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <nav class="pagination"><a href="{{ site.url }}" >Home</a></nav>
+</div>
