@@ -1,27 +1,32 @@
 ---
 layout: default
-title: n-eq
+title: "Home"
 ---
-<div>
-  <h1>Latest posts</h1>
-  <ul>
-    {% for post in site.posts limit:10 %}
-    <li class=article-list>
-      <a href="{{ site.baseurl }}{{ post.url }}" class=post-title>
-        {{ post.title }}
-      </a>
 
-      <span class="post-date">
-      <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: "%d/%m/%Y" }}
-      </time>
-      </span>
 
-      <p class=post-excerpt>
-        {{ post.excerpt }} ...<a href="{{ site.baseurl }}{{ post.url }}"> Read more</a>
-      </p>
-    </li>
-    {% endfor %}
-  </ul>
+<div class="post">
+
+    <p>
+    Hey!
+    </p>
+
+    <p>
+    My name is Nabil ELQATIB. This is a small personal blog where I mainly share technical content.
+    It was completely inactive for a few years, but I'm currently planning on posting regularly.
+    </p>
+
+    <p>
+    Besides my work as an embedded software engineer, I am currently exploring two main topics in my free time: embedded Rust, and edge AI.
+    </p>
+
+    <p>
+    For the moment, most content covers the following topics: <i>C/C++, Rust, Python, RTOS, MCUs, embedded Linux, network communication protocols, performance and benchmarking, reverse engineering</i>.
+    </p>
+
+    <p>
+    You'll find the list of articles <a href={{ site.url }}/blog>here</a>.
+    </p>
+
+    You can reach out to me via email at <i><b>n dot elqatib at gmail dot com</b></i>, or via LinkedIn for professional enquiries.
+
 </div>
-
