@@ -4,6 +4,7 @@ title: "Write-up: Zephyr Project's meteoric rise"
 date: 2025-05-28
 tags: [writeup, zephyr, embedded, webinar]
 excerpt: "A write-up on Memfault's webinar on \"Zephyr’s Meteoric Rise and What It Means for the Future of Embedded\""
+update-date: 2025-05-30
 ---
 
 The embedded systems landscape is undergoing a significant transformation. In
@@ -58,7 +59,7 @@ big, complex, and real-time systems — often a sticking point in RTOS
 selection — Kate offered a reassuring update: performance is a top priority,
 and the next release is expected to deliver meaningful improvements on existing
 benchmarks. _"We're pretty close to the level of RTOS you need"_, she noted,
-hinted that current efforts are aimed at bring Zephyr closer to parity with
+hinting that current efforts are aimed at bring Zephyr closer to parity with
 traditional RTOSes. \
 This suggests that Zephyr isn’t just maturing in breadth (tooling, security,
 ecosystem), it’s also leveling up and becoming a stronger candidate even for
