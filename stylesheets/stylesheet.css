@@ -428,7 +428,7 @@ th {
 
 /* LAYOUT STYLES */
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Playfair Display', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
@@ -581,7 +581,7 @@ form {
 #main-content article h2.post-title {
   margin-top: 1.5rem;
   margin-bottom: 0;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Playfair Display', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: bold;
   color: #474747;
@@ -592,7 +592,7 @@ form {
   font-size: 1.1rem;
   font-style: italic;
   margin-bottom: 2rem;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: ' Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 
@@ -601,7 +601,7 @@ form {
 #main-content h1 {
   margin-top: 0;
   margin-bottom: 12px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Playfair Display', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 2.8em;
   font-weight: 800;
   color: #474747;
@@ -619,7 +619,7 @@ form {
 
 #main-content h2 {
   margin-bottom: 0.5em;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Playfair Display', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: bold;
   color: #474747;
@@ -628,7 +628,7 @@ form {
 #main-content h3 {
   margin-top: 24px;
   margin-bottom: 0.5em;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Playfair Display', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: #474747;
@@ -636,7 +636,7 @@ form {
 
 #main-content h4 {
   margin-bottom: 0.5em;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Playfair Display', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-weight: bold;
   color: #474747;
@@ -644,14 +644,14 @@ form {
 
 #main-content h5 {
   margin-bottom: 0.5em;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Playfair Display', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #474747;
 }
 
 #main-content h6 {
   margin-bottom: 8px;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Playfair Display', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: .8em;
   color: #474747;
 }
