@@ -286,6 +286,7 @@ DEPENDENCIES
   github-pages
   http_parser.rb (~> 0.6.0)
   jekyll-feed
+  jekyll-paginate
   jekyll-seo-tag
   jekyll-theme-midnight
   kramdown-parser-gfm

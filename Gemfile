@@ -9,6 +9,7 @@ group :jekyll_plugins do
   gem "jekyll-theme-midnight"
   gem "kramdown-parser-gfm"
   gem "webrick"
+  gem "jekyll-paginate"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
