@@ -10,7 +10,7 @@ With the rise of AI, the never-ending debates about its threats to software engi
 coupled with tech layoffs[^1], software engineering became an over-saturated market that's
 hard to penetrate, especially for juniors.
 
-Lately I've spent some reflecting on the question of what defines a "good" software engineer, what
+Lately I've spent some time reflecting on the question of what defines a "good" software engineer, what
 really makes the difference between them and the rest?
 
 ## What does "good" even mean?
@@ -39,7 +39,7 @@ in building trust and good reputation within the community.
 
 ## 1. Thou shalt master thy stack
 
-A good engineer is an engineer that's able to reinvent the wheel. Because they deeply understand
+A good engineer is one that's able to reinvent the wheel. Because they deeply understand
 what they're doing, they're able to explain the concepts and reimplement the tools they use daily,
 since they don't treat them as black boxes.
 
