@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What does it take to be a good software engineer in 2025?"
-date: 2025-06-16 00:00
+date: 2025-06-16
 tags: [engineering, philosophy]
 excerpt: "What's a good software engineer in 2025?"
 ---
