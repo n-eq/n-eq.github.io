@@ -95,4 +95,4 @@ those who combine curiosity, practical skills, resilience and adaptability will 
 at the table — no matter how far AI advances.
 
 ### Footnotes
-[^1]: according to layoffs.fyi, there were more than 150k tech layoffs in 2024, and 61,814 so far this year
+[^1]: according to layoffs.fyi, there were more than 150k tech layoffs in 2024, and 61,814 so far this year.
