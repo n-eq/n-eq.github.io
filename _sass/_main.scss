@@ -106,6 +106,8 @@ nav.pagination {
   opacity: 1;
 }
 
+// tag css config, adapted from
+// https://github.com/memfault/interrupt/blob/81025f582d1973fd6f7a154e97b19e070709b8d6/_sass/tag.scss#L1
 .post-tag {
   display: inline-block;
   padding: 0 .5rem;
@@ -122,10 +124,6 @@ nav.pagination {
     color: #fff;
   }
 }
-
-
-// tag css config, adapted from
-// https://github.com/memfault/interrupt/blob/81025f582d1973fd6f7a154e97b19e070709b8d6/_sass/tag.scss#L1
 .tags-expo {
   :target:before {
     content:"";
