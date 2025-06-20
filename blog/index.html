@@ -1,0 +1,36 @@
+---
+layout: default
+title: "Blog posts"
+pagination:
+    enabled: true
+---
+
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/blog.css" />
+
+
+<h1>Latest posts</h1>
+<ul>
+  {% for post in paginator.posts %}
+  <li class="article-list">
+    <a href="{{ site.baseurl }}{{ post.url }}" class="post-title">{{ post.title }}</a>
+    <span class="post-date">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
+    </span>
+    <p class="post-excerpt">
+      {{ post.excerpt }} ...<a href="{{ site.baseurl }}{{ post.url }}"> Read more</a>
+    </p>
+  </li>
+  {% endfor %}
+</ul>
+
+<nav class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}">Previous</a>
+  {% endif %}
+
+  <span></span>
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}">Next</a>
+  {% endif %}
+</nav>

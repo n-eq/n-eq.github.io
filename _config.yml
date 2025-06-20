@@ -18,6 +18,7 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-paginate
 
 twitter:
     username: neqneqneq
@@ -31,3 +32,7 @@ social:
   github: https://github.com/n-eq
   linkedin: https://linkedin.com/in/nabilelqatib
   rss_feed: 'feed.xml'
+
+# jekyll paginate settings
+paginate: 8
+paginate_path: "/blog/page:num/"

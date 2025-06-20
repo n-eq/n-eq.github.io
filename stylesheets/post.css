@@ -1,0 +1,27 @@
+.post .date-and-update {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.post .post-title {
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+.post.ul {
+  font-size: 10px;
+}
+
+.post.ol {
+  font-size: 10px;
+}
+
+
+nav.pagination.previous {
+    margin-right: auto;
+}
+nav.pagination.next {
+    margin-left: auto;
+}
