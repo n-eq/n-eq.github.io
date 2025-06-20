@@ -159,3 +159,64 @@ nav.pagination {
 .footer-socials img:hover {
   opacity: 1;
 }
+
+.post-tag {
+  display: inline-block;
+  padding: 0 .5rem;
+  margin-right: .5rem;
+  border-radius: 4px;
+  &:before {
+    // 
+    content: "\f02b";
+    font-family: FontAwesome;
+    padding-right: .5em;
+  }
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+
+// tag css config, adapted from
+// https://github.com/memfault/interrupt/blob/81025f582d1973fd6f7a154e97b19e070709b8d6/_sass/tag.scss#L1
+.tags-expo {
+  :target:before {
+    content:"";
+    display:block;
+    height:72px; /* fixed header height*/
+    margin:-72px 0 0; /* negative fixed header height */
+  }
+  .tags-expo-list {
+    @media (min-width: 38em) {
+      font-size: 0.9rem;
+    }
+    .post-tag {
+      margin: .2em .3em;
+    }
+  }
+  .tags-expo-section {
+    ul {
+      list-style-type: circle;
+      list-style-position: inside;
+      padding: 0;
+      li {
+        padding: 0 1rem;
+        &:hover {
+          list-style-type: disc;
+          padding: 0 .5rem;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+    .post-date {
+      display: inline-block;
+      font-size: 80%;
+      color: #9a9a9a;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
