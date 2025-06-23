@@ -50,7 +50,7 @@ In my first year at engineering school, I met a Tunisian postdoctoral researcher
 a good friend of mine. One time, we were sitting in a coffee shop, and he wanted to learn more about
 my studies (his field of work had nothing in common with computer science). He started asking me
 questions and after learning more about my domain (embedded systems), he struck me with this amazing
-question: "Do you know exactly how a computer works, then?". Although I think there are only
+question: _"Do you know exactly how a computer works, then?"_. Although I think there are only
 a handful of people on Earth who can confidently say they master all the nitty-gritty details of
 modern computers (or at least, general-purpose CPUs), the question highlights a very important
 aspect of being a good engineer.
