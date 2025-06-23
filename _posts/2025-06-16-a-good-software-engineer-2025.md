@@ -2,6 +2,7 @@
 layout: post
 title: "What does it take to be a good software engineer in 2025?"
 date: 2025-06-16
+update-date: 2025-06-23
 tags: [engineering, philosophy]
 excerpt: "What's a good software engineer in 2025?"
 ---
@@ -45,9 +46,18 @@ highly helpful in building trust and good reputation within the community.
 
 ## 1. Thou shalt master thy stack
 
-A good engineer is one that's able to reinvent the wheel. Because they deeply understand
-what they're doing, they're able to explain the concepts and reimplement the tools they use daily,
-since they don't treat them as black boxes.
+In my first year at engineering school, I met a Tunisian postdoctoral researcher who quickly became
+a good friend of mine. One time, we were sitting in a coffee shop, and he wanted to learn more about
+my studies (his field of work had nothing in common with computer science). He started asking me
+questions and after learning more about my domain (embedded systems), he struck me with this amazing
+question: "Do you know exactly how a computer works, then?". Although I think there are only
+a handful of people on Earth who can confidently say they master all the nitty-gritty details of
+modern computers (or at least, general-purpose CPUs), the question highlights a very important
+aspect of being a good engineer.
+
+A good engineer is one that's able to reinvent the wheel. Because they deeply understand what
+they're doing, they're able to explain the concepts and reimplement the tools they use daily, since
+they don't treat them as black boxes.
 
 Let's take an example. If you're a full-stack/web developer, try creating a library-free basic
 authentication system, implement a basic router for an SPA, build a simple
