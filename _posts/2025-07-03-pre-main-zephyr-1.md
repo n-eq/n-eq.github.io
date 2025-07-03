@@ -59,7 +59,7 @@ code under `arch/arm/core/cortex_m`.
 
 `vector_table.S` is a relatively small assembly file that can be broken down into the following:
 
-```c
+```asm
 SECTION_SUBSEC_FUNC(exc_vector_table,_vector_table_section,_vector_table)
 ```
 
@@ -167,12 +167,12 @@ offset `0`:
 And you're... right. However, although the two instructions do the same thing, they're not
 redundant, and don't serve the same purpose.
 
-Both lines set MSP, but they serve distinct purposes:
+Both lines set MSP, but they have distinct purposes:
 - The vector table's entry is used by the CPU at power-on-reset.
 - The `msr msp` instruction is used at runtime to ensure the value in MSP is correct, typically
   after bootloader handoff.
 
-### Post-Kernel flag clear
+### Post-kernel flag clear
 
 ```asm
 #if defined(CONFIG_DEBUG_THREAD_INFO)
