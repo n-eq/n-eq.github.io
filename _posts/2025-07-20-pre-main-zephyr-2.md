@@ -1,8 +1,9 @@
 ---
 layout: post
-date: 2025-07-20
-title: "Pre-main rituals: Zephyr C startup compiler and linker tricks"
-excerpt: "TODO"
+date: 2025-07-12
+title: "Pre-main rituals: Zephyr Cortex-M startup file compiler and linker tricks"
+excerpt: "A deep dive into Zephyr’s C runtime startup sequence on ARM Cortex-M:
+how macros and linker sections enable stage-based function registration."
 tags: [zephyr-pre-main, zephyr, embedded, assembly, arm, cortex-m, low-level, walkthrough]
 ---
 
