@@ -47,7 +47,7 @@ $ arm-none-eabi-objdump -t build/zephyr/zephyr.elf | grep _vector_table -w
 In `build/zephyr/linker.cmd` too, we can double-check that the firmware, thus the vector table,
 starts at the same address:
 
-```bash
+```
  OUTPUT_FORMAT("elf32-littlearm")
 _region_min_align = 32;
 MEMORY
