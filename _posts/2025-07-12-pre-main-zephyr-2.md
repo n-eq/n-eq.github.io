@@ -157,11 +157,11 @@ struct init_entry {
 }
 ```
 - Based on `level`, it calls `do_device_init(entry->dev)` for entries in the list that correspond to
-  the requested level if they're devices (which isn't the case for 99% initializers), otherwise
-  `entry->init_fn()`.
+  the requested level if they're device drivers (which is never the case for `EARLY` initialization
+  level), or `entry->init_fn()` otherwise.
 
 At this stage, we can ask a few questions:
-- How does `levels` array work and why is it `static`ally declared? 
+- How does `levels` array work and why is it `static`ally declared?
 - How are entries defined?
 
 Zephyr defines a set of "levels" of initializations; you can see them as a multistage rocket: each
@@ -176,7 +176,7 @@ After its definition, a function named
 SYS_INIT(my_init_function, 3 /* LEVEL */, 5 /* PRIO */);
 ```
 
-which ultimately expands, after a few operations, to this **very long** definition:
+which ultimately expands, after a few operations, to this **very verbose** definition:
 
 ```c
 static const __aligned(__alignof(struct init_entry)) struct init_entry
