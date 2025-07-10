@@ -4,7 +4,7 @@ date: 2025-07-03
 title: "Pre-main rituals: How Zephyr prepares Cortex-M CPUs"
 excerpt: "Before main() ever runs, Zephyr executes a carefully crafted boot sequence on ARM Cortex-M CPUs.
 The first part of this blog series breaks down the reset handler, vector table, and early startup logic."
-tags: [zephyr-pre-main, zephyr, embedded, assembly, arm, cortex-m, low-level, walkthrough]
+tags: [zephyr-pre-main, zephyr, rtos, embedded, assembly, arm, cortex-m, low-level, walkthrough]
 ---
 
 
