@@ -37,7 +37,7 @@ necessary to reset `VTOR` register to point to Zephyr's own table, so that futur
 faults hit the correct handlers.
 
 We can verify the address of the vector table in our output ELF file, confirming that the vector
-table starts at `0x10000`:
+table effectively starts at `0x10000`:
 
 ```bash
 $ arm-none-eabi-objdump -t build/zephyr/zephyr.elf | grep _vector_table -w
