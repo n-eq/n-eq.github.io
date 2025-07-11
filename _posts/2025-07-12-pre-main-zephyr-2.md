@@ -150,15 +150,15 @@ called multiple times inside `z_cstart`, and has an important role so let's unpa
 The source code of the function is fairly easy to understand regardless of the context. It can be
 summarized as follows:
 
-- The function accepts an enum parameter `level`.
-- It defines a static list `levels` of type:
+1. The function accepts an enum parameter `level`.
+2. It defines a static list `levels` of type:
 ```c
 struct init_entry {
     int (*init_fn)(void);
     const struct device *dev;
 }
 ```
-- Based on `level`, it calls `do_device_init(entry->dev)` for entries in the list that correspond to
+3. Based on `level`, it calls `do_device_init(entry->dev)` for entries in the list that correspond to
   the requested level if they're device drivers (which is never the case for `EARLY` initialization
   level), or `entry->init_fn()` otherwise.
 
