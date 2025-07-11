@@ -58,7 +58,7 @@ MEMORY
 
 ## 3. [Config-specific] Floating Point Unit initialization
 
-Zephyr then enables the Floating Point Unit (FPU) on CPUs that have it (Cortex-M4F and M33). It is
+Zephyr then enables the Floating Point Unit (FPU) on CPUs that have it (Cortex-M4F, M7F, M33F, M35PF). It is
 important to perform this setup early enough – i.e. before any FP-related instructions are run –
 to avoid triggering usage faults.
 
@@ -92,8 +92,7 @@ Following this, Zephyr either calls the SoC's custom interrupt controller init f
 definition from `arch/arm/core/cortex_m/irq_init.c`:
 
 ```c
-void z_arm_interrupt_init(void)
-{
+void z_arm_interrupt_init(void) {
 	int irq = 0;
 
 #if defined(CONFIG_MULTI_LEVEL_INTERRUPTS) && defined(CONFIG_2ND_LVL_ISR_TBL_OFFSET)
@@ -104,7 +103,6 @@ void z_arm_interrupt_init(void)
 		NVIC_SetPriority((IRQn_Type)irq, _IRQ_PRIO_OFFSET);
 	}
 }
-
 ```
 
 The function is basically a loop over all IRQs.\
@@ -117,6 +115,10 @@ unless overridden later.
 ## 7. [Config-specific] Cache init
 
 Most ARM Cortex-M CPUs don't have data/instruction cache, so this step is skipped.
+Instruction and/or data cache can only be present optionally in Cortex-M7 and M35P.
+In this step, Zephyr calls the generic `arch_cache_init` function, which is empty
+by default on Cortex-M families, even when it's present. Instead, cache control
+is left to the SoC vendor’s implementation, as we'll see in the next article.
 
 ## 8. [Config-specific] Trapping null pointer dereferences
 
@@ -129,8 +131,8 @@ dereferences in the address space spanning from `0x0` to `CONFIG_NULL_POINTER_EX
 the size of paged "unmapped" (defaults to `0x400`).
 
 For the remaining cases (ARMv7-M processors, or processors using a backwards-compatible ARMv8-M
-processor implementation supporting Main Extension), a comparator and a mask are used.\ The result
-is still the same though: If any illegal R/W access is performed in the range `[0,
+processor implementation supporting Main Extension), a comparator and a mask are used.\
+The result is still the same though: If any illegal R/W access is performed in the range `[0,
 CONFIG_NULL_POINTER_EXCEPTION_DETECTION_DWT]`, an exception occurs.
 
 This feature is very useful and can help detect null pointer bugs that occur very early during
@@ -189,22 +191,22 @@ __init_my_init_function = {
 };
 ```
 
-In this definition lies most answers to our previous questions. In particular, this is a very
-insightful illustration on the power of using `__attribute__` keyword. Let's see what purpose each
+In this definition lie most answers to our previous questions. In particular, this is a very
+insightful illustration of the power of `__attribute__` keyword. Let's see what purpose each
 of them serves:
 
 - `__attribute__((no_sanitize("address")))` disables Address Sanitizer (ASan) to avoid false
-  positives or runtime overhead for this very "low-level" variable. It is only relevant if
+  positives or runtime overhead for this very "low-level" variable. It is only relevant when
   `-fsanitize=address` is used in compiler flags.
 - `__attribute__((__used__))` tells the compiler not to discard the variable even if it looks
-  unused. This is even more important if we know the variable is declared as `static` (which is the
+  unused. This is even more important if we know that when the variable is declared as `static` (which is the
   case here), the compiler may optimize it away.
 - `__attribute__((__section__(".z_init_POST_KERNEL_P_5_SUB_0_")))` is the key attribute to help
   understand this definition. \
   It instructs the compiler to place this variable in a custom linker section named
   `.z_init_POST_KERNEL_P_5_SUB_0_`, allowing the linker script, as we'll see, to aggregate init
   entries per level and priority into a contiguous block. Without this, Zephyr wouldn’t find it
-  easily.
+  easily at runtime.
 
 The last point is exactly how everything fits together. If we inspect the linker script
 (reminder: it's `build/zephyr/linker.cmd`), we'll see this:
@@ -223,7 +225,7 @@ The last point is exactly how everything fits together. If we inspect the linker
  } > FLASH
 ```
 
-We can conclude that our function `my_init_function`, that ended up being manually put in
+We can conclude that `my_init_function`, which ended up being manually put in
 `.z_init_POST_KERNEL_P_5_SUB_0_`, will be matched by the pattern:
 
 ```asm
@@ -247,8 +249,10 @@ macros and Kconfig definitions), but this never happens.
 
 We can now clearly see how the levels array ties directly into the linker script. The
 `__init_*_start` symbols are linker-defined pointers to arrays of `init_entry` structs, each sorted
-into their corresponding `.z_init_*` section during compilation.\ At runtime, `z_sys_init_run_level`
+into their corresponding `.z_init_*` section during compilation.\
+At runtime, `z_sys_init_run_level`
 walks through each section for a given level and calls the associated initialization functions. This
 design allows Zephyr to cleanly organize startup logic into very well-defined stages.
 
-In the next post, we’ll look at how `z_cstart` sets up threads and finally hands control off to `main()`.
+In the next post, we’ll look at how `z_cstart` finishes the remaining setup,
+configures threads and finally hands control off to `main()`.
