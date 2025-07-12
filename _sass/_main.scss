@@ -1,49 +1,3 @@
-.article-list {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
-
-}
-
-.article-list .post-title {
-  font-size: 30px;
-  font-family: 'Playfair Display', serif;
-}
-
-.article-list .post-date {
-  font-family: monospace;
-  font-size: 0.35em;
-  color: #999;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-.article-list .post-excerpt {
-  font-size: 14px;
-  color: #656160;
-  font-style: italic;
-}
-
-.post .post-title {
-  font-size: 30px;
-  font-family: 'Playfair Display', serif;
-}
-
-.post .date-and-update {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  font-style: italic;
-}
-
-.post.ul {
-  font-size: 10px;
-}
-
-.post.ol {
-  font-size: 10px;
-}
-
 p {
   font-size: 20px;
 }
@@ -81,7 +35,6 @@ nav.pagination {
 
   a {
     border-bottom: 0.2rem solid;
-    // color: #cc0000;
     font-weight: bold;
     text-decoration: none;
 
@@ -89,13 +42,6 @@ nav.pagination {
       border-bottom: 0.2rem solid #000000;
       color: #000000;
     }
-  }
-
-  .previous {
-    margin-right: auto;
-  }
-  .next {
-    margin-left: auto;
   }
 }
 
@@ -158,4 +104,62 @@ nav.pagination {
 
 .footer-socials img:hover {
   opacity: 1;
+}
+
+// tag css config, adapted from
+// https://github.com/memfault/interrupt/blob/81025f582d1973fd6f7a154e97b19e070709b8d6/_sass/tag.scss#L1
+.post-tag {
+  display: inline-block;
+  padding: 0 .5rem;
+  margin-right: .5rem;
+  border-radius: 4px;
+  &:before {
+    content: "\f02b";
+    font-family: FontAwesome;
+    padding-right: .5em;
+  }
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.tags-expo {
+  :target:before {
+    content:"";
+    display:block;
+    height:72px; /* fixed header height*/
+    margin:-72px 0 0; /* negative fixed header height */
+  }
+  .tags-expo-list {
+    @media (min-width: 38em) {
+      font-size: 0.9rem;
+    }
+    .post-tag {
+      margin: .2em .3em;
+    }
+  }
+  .tags-expo-section {
+    ul {
+      list-style-type: circle;
+      list-style-position: inside;
+      padding: 0;
+      li {
+        padding: 0 1rem;
+        &:hover {
+          list-style-type: disc;
+          padding: 0 .5rem;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+    .post-date {
+      display: inline-block;
+      font-size: 80%;
+      color: #9a9a9a;
+      margin: 0;
+      padding: 0;
+    }
+  }
 }

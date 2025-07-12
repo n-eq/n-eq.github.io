@@ -19,6 +19,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-toc
+  - jekyll-paginate
 
 twitter:
     username: neqneqneq
@@ -32,3 +33,7 @@ social:
   github: https://github.com/n-eq
   linkedin: https://linkedin.com/in/nabilelqatib
   rss_feed: 'feed.xml'
+
+# jekyll paginate settings
+paginate: 10
+paginate_path: "/blog/page:num/"
