@@ -163,3 +163,22 @@ nav.pagination {
     }
   }
 }
+
+/* Center main content with max-width */
+.post-content,
+.page-content,
+article,
+main {
+  // Set the content width to 85 chars
+  max-width: 85ch;
+  margin: 0 auto;
+  // Provides padding equivalent to 2 characters on each side
+  padding: 0 2ch;
+}
+
+/* For code blocks, allow them to be wider */
+.post-content pre,
+.post-content .highlight {
+  max-width: 100%;
+  overflow-x: auto;
+}
