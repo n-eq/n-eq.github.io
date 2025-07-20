@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0" version="28.0.4">
+  <diagram id="SDT5f1kvkY0nMnXNGRKW" name="Page-3">
+    <mxGraphModel dx="1188" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pfKBiG7FV5TOnd74tjHY-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ladz3YPTZz4mTH0wyyf5-1" target="pfKBiG7FV5TOnd74tjHY-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ladz3YPTZz4mTH0wyyf5-1" value="Reset" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="300" y="110" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="x92SasX_Q5vavQGTkify-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pfKBiG7FV5TOnd74tjHY-1" target="x92SasX_Q5vavQGTkify-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pfKBiG7FV5TOnd74tjHY-1" value="__start" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="290" y="245" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ky1uYz1pD8wBh_W9wrsK-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="x92SasX_Q5vavQGTkify-1" target="ky1uYz1pD8wBh_W9wrsK-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x92SasX_Q5vavQGTkify-1" value="z_arm_prep_c" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="290" y="365" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eMt6eKIQCFVcQpi429dV-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ky1uYz1pD8wBh_W9wrsK-1" target="eMt6eKIQCFVcQpi429dV-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ky1uYz1pD8wBh_W9wrsK-1" value="z_cstart" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="290" y="475" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eMt6eKIQCFVcQpi429dV-2" value="&lt;div data--h-bstatus=&quot;0OBSERVED&quot;&gt;&lt;b&gt;CPU reset entry point&lt;/b&gt;&lt;/div&gt;&lt;div data--h-bstatus=&quot;0OBSERVED&quot;&gt;&lt;br data--h-bstatus=&quot;0OBSERVED&quot;&gt;&lt;/div&gt;Sets up minimal environment&lt;br data--h-bstatus=&quot;0OBSERVED&quot;&gt;(BSS, stack, etc.) before&lt;br data--h-bstatus=&quot;0OBSERVED&quot;&gt;calling z_arm_prep_c" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="400" y="230" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eMt6eKIQCFVcQpi429dV-3" value="&lt;b data--h-bstatus=&quot;0OBSERVED&quot;&gt;Architecture-specific features&lt;/b&gt;&lt;br data--h-bstatus=&quot;0OBSERVED&quot;&gt;&lt;br data--h-bstatus=&quot;0OBSERVED&quot;&gt;Sets up the stack, vector table, low-level&lt;br data--h-bstatus=&quot;0OBSERVED&quot;&gt;memory regions before calling&lt;br data--h-bstatus=&quot;0OBSERVED&quot;&gt;C runtime code&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="380" y="350" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eMt6eKIQCFVcQpi429dV-4" value="&lt;b data--h-bstatus=&quot;0OBSERVED&quot;&gt;Zephyr’s main C runtime init function&lt;br data--h-bstatus=&quot;0OBSERVED&quot;&gt;&lt;/b&gt;&lt;br data--h-bstatus=&quot;0OBSERVED&quot;&gt;Configures architecture features&lt;br data--h-bstatus=&quot;0OBSERVED&quot;&gt;Initializes devices and subsystems&lt;br data--h-bstatus=&quot;0OBSERVED&quot;&gt;&amp;nbsp;Spins-off user&#39;s &lt;span data--h-bstatus=&quot;0OBSERVED&quot; style=&quot;color: rgb(130, 179, 102);&quot;&gt;&lt;span style=&quot;color: rgb(151, 208, 119);&quot; data--h-bstatus=&quot;0OBSERVED&quot;&gt;&lt;b&gt;main&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="390" y="460" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eMt6eKIQCFVcQpi429dV-6" value="main" style="ellipse;whiteSpace=wrap;html=1;fillColor=#82B366;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="605" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
