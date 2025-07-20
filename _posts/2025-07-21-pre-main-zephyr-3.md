@@ -1,8 +1,10 @@
 ---
 layout: post
 date: 2025-07-21
-title: "Pre-main rituals: TODO"
-excerpt: "TODO"
+title: "Pre-main rituals: Spinning-off main"
+excerpt: "The final part of this series follows the transition to actual application logic.
+We trace how Zephyr switches stacks, sets up the main thread, and makes the first real function
+call in user code."
 tags: [zephyr-pre-main, assembly, zephyr, rtos, embedded, C, arm, cortex-m, low-level, walkthrough]
 ---
 
@@ -192,13 +194,20 @@ additional things:
 
 ## A high-level overview
 
+As a summary, this high-level diagram gives a visual representation of the boot flow from power-on
+until `main`, with a special focus on the steps we covered in the series: `__start`, `z_arm_prep_c`,
+and `z_cstart`.
+
+<img src="/assets/images/zephyr-pre-main-high-level-diagram.png" alt="Diagram" data-zoomable>
+
 ## Somes words to end
 
-I'm a firm believer that [good software engineers]({% post_url
-2025-06-16-a-good-software-engineer-2025 %}) value digging into the nitty-gritty details to
-understand and master their stack. Being a newbie to Zephyr, I wrote this series with the hope of
-getting a better grasp on the source code from the angle of Cortex-M startup files. Needless to say,
-this effort was also made hoping that someone, somewhere, some time, would find this useful, and
-possibly learn a thing or two.\
-If something was wrong, incorrect, or imprecise, please reach out to
-me and I would be glad to learn from you.
+I’m a firm believer that [good software engineers]({% post_url
+2025-06-16-a-good-software-engineer-2025 %}) take the time to dig into the nitty-gritty details to
+truly master their stack. As someone still new to Zephyr, I wrote this series to better understand
+the source code, especially through the lens of Cortex-M startup files.
+
+This deep dive was as much an effort to learn as it was to share. If it helped someone else make
+sense of the system, even a little, then it was worth writing.\
+If you spot anything inaccurate, misleading, or unclear, please reach out, I would genuinely
+appreciate the opportunity to improve and learn from you.
