@@ -189,7 +189,7 @@ additional things:
 - A small detail worth noting is the use of a not-so-known assembler directive called `.ltorg`. It
   ensures that function addresses used earlier in the assembly, namely `z_thread_entry` and
   `arch_irq_unlock_outlined`, are not placed _too far away_ in memory so the CPU can load them
-  correctly and efficiently. It is a low-level concern that's mostly important in ARM processors
+  efficiently. It is a low-level concern that's mostly important in ARM processors
   that have limited addressing ranges, especially in Thumb mode.
 
 ## A high-level overview
