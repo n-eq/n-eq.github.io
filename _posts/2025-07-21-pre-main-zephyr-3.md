@@ -145,7 +145,7 @@ a step back and see what we can learn from it.
 
 The `arch_new_thread` function prepares a new thread's with a proper initial state so that when it's
 first scheduled, it can execute correctly with the processor's context switching mechanism. The most
-important part of it is arguably the inline assembly block that directly performs the switch. Before
+important part of it is arguably the assembly block that directly performs the switch. Before
 it, it's all about setting up global variables and pointers with main thread data (FPU, TLS, etc.),
 stack protection, and so forth. We won't cover that part.
 
