@@ -178,7 +178,7 @@ additional things:
 
 - Switching to assembly at this stage is not really a choice. This can't be done in pure C as it
   requires precise low-level control over registers and CPU state.
-- This is the first time `PSP` is used, marking a key shift from early init, to C application
+- This is the first time `PSP` is used, marking a key shift from early init to C application
   runtime. Since reset, `MSP` was used for all operations. `msr PSP, %1` sets the new stack pointer
   to the top of the stack previously allocated for `main`.
 - Saving `_main` in `r4` beforehand is mandatory to make sure it is retrieved after the transition
