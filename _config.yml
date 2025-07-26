@@ -18,6 +18,7 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-toc
   - jekyll-paginate
 
 twitter:
