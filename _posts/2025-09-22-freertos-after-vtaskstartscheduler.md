@@ -202,13 +202,13 @@ environment so that an `svc` call can restore the very first task’s context fr
 
 * `ldr r0, =0xE000ED08`
 
-Loads the address of the Vector Table Offset Register (VTOR) in the System Control
-Block (SCB) into r0.
+Loads the address of the Vector Table Offset Register (VTOR) in the System Control Block (SCB) into
+`r0`.
 
 * `ldr r0, [r0]`
 
-Dereferences VTOR to get the address of the vector table in memory. On reset,
-this points to the start of flash (0x0) unless the table is relocated.
+Dereferences VTOR to get the address of the vector table in memory. On reset, this points to the
+start of flash (`0x0`) unless the table is relocated.
 
 * `ldr r0, [r0]`
 
