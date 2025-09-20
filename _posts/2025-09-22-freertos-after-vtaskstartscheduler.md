@@ -3,7 +3,7 @@ layout: post
 title: "What happens after you call vTaskStartScheduler?"
 date: 2025-09-22
 tags: [freertos, firmware, rtos, C, walkthrough]
-excerpt: ""
+excerpt: "How does FreeRTOS prepare the stack, configure interrupts, and use an SVC call to launch your first task?"
 ---
 
 FreeRTOS is an amazing tool for building simple yet powerful embedded systems.
