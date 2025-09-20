@@ -18,7 +18,7 @@ So what actually happens when you call it? Let’s peel back the layers.
 Before ever reaching `vTaskStartScheduler`, the code needs to go through
 `main()`. But even before that, the CPU follows the well-defined boot sequence
 common to ARM Cortex-M device family: it jumps to the reset handler and some
-low-level magic happens that takes of a few important things: initializing
+low-level magic happens that takes care of a few important things: initializing
 memory, the stack (pointer), and other bare-metal groundwork to make C code
 runnable, we won't get into too many details on this part.
 
@@ -156,7 +156,7 @@ ticks) are then set to the lowest priority level, so they don't preempt any "rea
 vPortSetupTimerInterrupt();
 ```
 
-This call starts SysTick, by configuring the hardware timer that generates the tick interrupt. The
+This call starts SysTick by configuring the hardware timer that generates the tick interrupt. The
 tick is central in the OS's time base, it's used to:
 - wake up delayed tasks
 - update system tick count
